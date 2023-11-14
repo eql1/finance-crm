@@ -1,0 +1,27 @@
+.data {
+  &__main,
+  &__shadow {
+    display: flex;
+    width: 70px;
+    border-radius: 20px;
+    transition: opacity 0.3s;
+  }
+
+  &__main {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.data__shadow {
+  background-color: transparent;
+  opacity: 0.2;
+  background: repeating-linear-gradient(
+    -45deg,
+    #000000,
+    #000000 3px,
+    white 3px,
+    white 15px
+  );
+}

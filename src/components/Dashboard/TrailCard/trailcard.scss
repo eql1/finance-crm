@@ -1,0 +1,42 @@
+.trailcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 20px;
+  height: 210px;
+
+  &__header {
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    align-items: end;
+    text-align: end;
+
+    font-weight: 300;
+
+    .trailcard__duration {
+      gap: 5px;
+      display: flex;
+      align-items: end;
+      text-align: end;
+    }
+
+    h2 {
+      font-size: 60px;
+      font-weight: 300;
+      line-height: 0.6;
+    }
+
+    .trailcard__link {
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+}

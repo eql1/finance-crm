@@ -1,0 +1,60 @@
+$blockFill: rgba(
+  $color: #f4f3ee,
+  $alpha: 1,
+);
+$blockRadius: 30px;
+$buttonFill: #ecebe7;
+
+.data-container {
+  box-sizing: content-box;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: $blockRadius;
+  background-color: $blockFill;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .header {
+    box-sizing: content-box;
+
+    &-info {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+    }
+
+    &-btns {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+
+  .opt-btn {
+    cursor: pointer;
+    padding: 17px 15px;
+    background-color: $buttonFill;
+    border-radius: 25px;
+  }
+
+  .ref-btn {
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px 15px;
+    background-color: $buttonFill;
+    border-radius: 50%;
+  }
+}

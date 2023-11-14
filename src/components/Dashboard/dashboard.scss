@@ -1,0 +1,123 @@
+$blockFill: rgba(
+  $color: #f6f3ee,
+  $alpha: 0.7,
+);
+$blockRadius: 20px;
+
+.dashboard {
+  h3 {
+    color: #000;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .block {
+    padding: 20px 80px 20px 20px;
+    border-radius: $blockRadius;
+    background-color: $blockFill;
+    border-radius: $blockRadius;
+  }
+
+  p {
+    font-size: 20px;
+    color: #333;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__summary-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2em;
+
+    h1 {
+      color: #000;
+      font-family: League Spartan;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  &__summary-stats {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__summary-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: $blockFill;
+
+    filter: blur(20);
+
+    h2 {
+      color: #000;
+      font-family: League Spartan;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: normal;
+    }
+  }
+
+  &__summary-ref {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+    > *:first-child {
+      flex: 2;
+    }
+
+    > *:last-child {
+      flex: 1;
+    }
+  }
+
+  .block-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__trails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__data {
+    position: relative;
+    width: 700px;
+    overflow: hidden;
+  }
+}

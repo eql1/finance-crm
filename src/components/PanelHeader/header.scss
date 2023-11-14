@@ -1,0 +1,62 @@
+.panel-header {
+  padding: 30px 31px 0 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+
+    a {
+      position: relative;
+    }
+
+    a.active::after {
+      left: 0;
+      top: 20px;
+      position: absolute;
+      width: 3em;
+      height: 0.1em;
+      background-color: black;
+      content: "";
+    }
+  }
+
+  &__logo {
+    width: 60px;
+    transition: all 0.3s;
+    .svg-logo {
+      cursor: pointer;
+    }
+    &:hover {
+      .svg-logo {
+        filter: invert(34%) sepia(59%) saturate(6746%) hue-rotate(338deg)
+          brightness(92%) contrast(103%);
+      }
+    }
+    &:hover img {
+      animation: bounce 1s ease infinite;
+    }
+
+    img {
+      width: 55px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    column-gap: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+
+    a:hover:not(.active) {
+      color: rgb(103, 103, 103);
+    }
+  }
+
+  &__control-btns {
+    width: 60px;
+  }
+}

@@ -1,0 +1,39 @@
+.slider {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    width: 600px;
+    max-height: 320px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    font-size: 50px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #636262;
+    }
+  }
+
+  &__image-container {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  &__image {
+    max-width: none;
+    width: 600px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

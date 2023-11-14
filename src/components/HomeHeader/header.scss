@@ -1,0 +1,90 @@
+.header {
+  padding: 30px 31px 0 0;
+  min-height: 80px;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+  }
+  &__logo {
+    width: 215px;
+    transition: all 0.3s;
+    .svg-logo {
+      cursor: pointer;
+
+      &:hover {
+        animation: bounce 1s ease infinite;
+
+        filter: invert(34%) sepia(59%) saturate(6746%) hue-rotate(338deg)
+          brightness(92%) contrast(103%);
+      }
+    }
+
+    img {
+      width: 55px;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      column-gap: 32px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: capitalize;
+
+      li:hover a {
+        color: rgb(103, 103, 103);
+      }
+    }
+  }
+
+  &__action-wrapper {
+    width: 215px;
+    display: flex;
+    justify-content: end;
+    column-gap: 27px;
+    align-items: center;
+    .header__action-text {
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      &:hover {
+        color: rgb(70, 70, 70);
+      }
+    }
+    .header__action-btn {
+      a {
+        cursor: pointer;
+        color: white;
+        border-radius: 60px;
+        background: #000;
+        padding: 13px 36px;
+
+        transition: all 0.3s;
+        &:hover {
+          background: rgb(70, 70, 70);
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+}
